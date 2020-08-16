@@ -9,11 +9,13 @@ jobs:
           name: Install requirements
           command: pip3 install -r requirements.txt
       - run:
-          name: Testing install all right
+          name: Install cfpq_data_devtools
+          command: cd deps/CFPQ_Data && python3 setup.py install
+      - run:
+          name: Run tests
           command: python3 main.py
 
 workflows:
   some_workflow:
-    # Run the welcome/run job in its own container
     jobs:
       - build

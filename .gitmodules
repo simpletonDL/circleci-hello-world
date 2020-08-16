@@ -1,0 +1,4 @@
+[submodule "deps/CFPQ_Data"]
+	path = deps/CFPQ_Data
+	url = https://github.com/JetBrains-Research/CFPQ_Data.git
+	branch = tools_refactoring
