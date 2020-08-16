@@ -6,8 +6,14 @@ jobs:
     steps:
       - checkout
       - run:
+          - name: Pull submodules
+          - command: |
+              git submodule init
+              git submodule update --remote
+      - run:
           name: Install requirements
-          command: pip3 install -r requirements.txt
+          command: |
+            pip3 install -r requirements.txt
       - run:
           name: Install cfpq_data_devtools
           command: cd deps/CFPQ_Data && python3 setup.py install
