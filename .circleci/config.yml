@@ -6,7 +6,10 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Hello World Message
+          name: Install requirements
+          command: pip3 install -r requirements.txt
+      - run:
+          name: Testing install all right
           command: python3 main.py
 
 workflows:
